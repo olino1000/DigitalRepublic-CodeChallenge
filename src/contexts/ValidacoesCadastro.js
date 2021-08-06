@@ -7,7 +7,8 @@ function semValidacao() {
 const ValidacoesCadastro = React.createContext({
 	comprimento: semValidacao,
 	altura: semValidacao,
-	portasEjanelas: semValidacao,
+	portas: semValidacao,
+	janelas: semValidacao,
 });
 
 export default ValidacoesCadastro;

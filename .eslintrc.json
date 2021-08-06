@@ -14,6 +14,7 @@
 	"plugins": ["react", "prettier"],
 	"ignorePatterns": ["*.test.js", "*.test.tsx"],
 	"rules": {
+		"no-plusplus": "off",
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 		"react/react-in-jsx-scope": "off",
 		"jsx-a11y/label-has-associated-control": [

@@ -1,3 +1,3 @@
-import Paredes from './Paredes'
+import Paredes from './Paredes';
 
-export default Paredes
+export default Paredes;

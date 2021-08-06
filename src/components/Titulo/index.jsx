@@ -1,3 +1,3 @@
-import Titulo from './Titulo'
+import Titulo from './Titulo';
 
-export default Titulo
+export default Titulo;

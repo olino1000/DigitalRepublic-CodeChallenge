@@ -1,13 +1,15 @@
 import React from 'react';
 import ValidacoesCadastro from './contexts/ValidacoesCadastro';
+import ValidacoesTinta from './contexts/ValidacoesTinta';
 import Cabecalho from './components/Cabecalho';
-import Container from './components/Container';
+import Encapsula from './components/Encapsula';
 import GlobalStyle from './styles/GlobalStyle';
 import {
 	validarCompr,
 	validarAlt,
-	validaPortJanela,
-} from './models/ValidaDados';
+	validaPortEJanela,
+	calculaLatasTinta,
+} from './models/RegrasNegocio';
 
 function App() {
 	return (
@@ -18,10 +20,17 @@ function App() {
 				value={{
 					comprimento: validarCompr,
 					altura: validarAlt,
-					portasEjanelas: validaPortJanela,
+					portas: validaPortEJanela,
+					janelas: validaPortEJanela,
 				}}
 			>
-				<Container />
+				<ValidacoesTinta.Provider
+					value={{
+						tinta: calculaLatasTinta,
+					}}
+				>
+					<Encapsula />
+				</ValidacoesTinta.Provider>
 			</ValidacoesCadastro.Provider>
 		</>
 	);

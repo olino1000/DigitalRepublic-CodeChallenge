@@ -1,18 +1,31 @@
-// import React from "react";
-// import { Box, Botao } from "../UI";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Botao, Items, ItemInicio, Spans } from '../../styles';
 
-// import Items from "../Items";
+const Paredes = ({ onDelete, comprimento, altura, portas, janelas }) => (
+	<>
+		<Items>
+			<ItemInicio>
+				<Spans>Comprimento: {comprimento}</Spans>
+				<Spans>Altura: {altura}</Spans>
+			</ItemInicio>
+			<ItemInicio>
+				<Spans>Portas: {portas}</Spans>
+				<Spans>Janelas: {janelas}</Spans>
+			</ItemInicio>
+			<ItemInicio>
+				<Botao onClick={onDelete}>Excluir</Botao>
+			</ItemInicio>
+		</Items>
+	</>
+);
 
-const Paredes = () => {
-	// return (
-	//   <Box>
-	//     {extratoLista.updates.map(({ id, type, from, value, date }) => {
-	//       return (
-	//         <Items key={id} type={type} from={from} value={value} date={date} />
-	//       );
-	//     })}
-	//     <Botao>Ver Mais</Botao>
-	//   </Box>
-	// );
-};
 export default Paredes;
+
+Paredes.propTypes = {
+	onDelete: PropTypes.func.isRequired,
+	comprimento: PropTypes.string.isRequired,
+	altura: PropTypes.string.isRequired,
+	portas: PropTypes.string.isRequired,
+	janelas: PropTypes.string.isRequired,
+};

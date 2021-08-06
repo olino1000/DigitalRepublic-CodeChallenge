@@ -1,3 +1,3 @@
-import Cabecalho from './Cabecalho'
+import Cabecalho from './Cabecalho';
 
-export default Cabecalho
+export default Cabecalho;
