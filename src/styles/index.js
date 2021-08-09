@@ -62,6 +62,7 @@ export const BoxParedes = styled.div`
 	box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
 	padding: 20px;
 	width: 60%;
+	height: fit-content;
 
 	@media (max-width: 800px) {
 		width: 100%;
